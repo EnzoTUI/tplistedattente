@@ -7,7 +7,10 @@
 	<artifactId>fileattente</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-
+	
+	<scm>
+		<developerConnection>scm:git:https://github/EnzoTUI/tplistedattente.git</developerConnection>
+	</scm>
 	<!-- précisez le nom et l'email de chaque membre de votre groupe -->
 	<developers>
 		<developer>
@@ -101,11 +104,23 @@
 				<executions>
 					<execution>
 						<phase>install</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
 					</execution>
 				</executions>
 				<configuration>
 					<version>11.0.0.Final</version>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>mave,-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<releaseProfiles>release</releaseProfiles>
+				<configuration/>
 			</plugin>
 		</plugins>
 	</build>
