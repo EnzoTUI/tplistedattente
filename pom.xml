@@ -4,7 +4,7 @@
 	<!-- artifactId correspond au nom de votre application, n'hésitez pas à 
 		changer la valeur par défaut -->
 	<artifactId>fileattente</artifactId>
-	<version>2</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	
 	<scm>
@@ -117,9 +117,13 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.3</version>
-				<goals>
-					<goal>install </goal>
-				</goals>
+				<executions>
+					<execution>
+						<goals>
+							<goal>install</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 					<releaseProfiles>release</releaseProfiles>
