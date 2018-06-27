@@ -9,7 +9,7 @@
 	<packaging>war</packaging>
 	
 	<scm>
-		<developerConnection>scm:git:https://github/EnzoTUI/tplistedattente.git</developerConnection>
+		<developerConnection>scm:git:https://github.com/EnzoTUI/tplistedattente.git</developerConnection>
 	</scm>
 	<!-- précisez le nom et l'email de chaque membre de votre groupe -->
 	<developers>
